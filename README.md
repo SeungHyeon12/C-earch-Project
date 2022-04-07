@@ -1,4 +1,4 @@
-﻿# C'earch Project (담당part by 승현수)
+﻿# C'earch Project (담당part by pm 및 main 개발자 승현수)
 -------------------
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
 ### project 기간 : 3/14 ~ 4/4
@@ -15,4 +15,8 @@
 
 ## 페이지 구성 및 개요
 ![image](https://user-images.githubusercontent.com/72781752/162289664-210fcbc2-81a7-42ea-b39c-34d6ab501e8c.png)
++ 위와같이 서비스흐름도가 구성되어있습니다. 
+1 서비스 페이지에 따른 erd 작성 
+2 멘토 멘티 관리자 role 에 따른 권한분기 설정에 따른 api 작성
+3 
 
