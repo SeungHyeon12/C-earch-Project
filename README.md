@@ -185,9 +185,15 @@ JWT를 이용하여 구성하였습니다.
   
 ![image](https://user-images.githubusercontent.com/72781752/162334403-42469b0b-fb27-4089-8586-94c380c137fe.png)
 
+## 대규모 트래픽을 고려한 분산형 아키텍트 구성 및 배포
+  기본적인 인스턴스를 올리는 방식보다는 서비스가 실제로 배포된 경우 대규모 트래픽을 받을 때를 상정하여 아키텍트를 구성하였습니다. 
+  이에대해 두가지로 나누어 말씀드리겠습니다. 아래는 저희 서비스가 실제로 배포된 아키텍트입니다
   
+  ![image](https://user-images.githubusercontent.com/72781752/162335160-effbeb95-abaf-4f5d-aefb-64eb68a8cd20.png)
+
   
-  
+  1. kubernetes를 사용한 오토스케일링 및 배포
+  2. 채팅서버에대한 분산(redis cluster)
 
 
 
