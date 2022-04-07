@@ -79,12 +79,19 @@
   }
  ```
  ![image](https://user-images.githubusercontent.com/72781752/162316121-bb4e81d3-a752-4a2e-bb1e-fadf3b060e10.png) 
- ### user fetch 
+ ### USER fetch 
  서비스의 특징상 내가 듣기원하는 카테고리(ex. Java , python) 과같이 선택항목에 대한 filtering 하여 결과를 보여줘여하는 경우가 많이 있습니다.
  이에따라서 각각의 sorting 에 따른 fetch 하는 api 들을 구현하였습니다.
  또한 위에서 말했듯이 서비스에서 멘티에서 멘토로의 승격시스템을 통해 중복 데이터를 줄인다고 하였습니다. 즉 멘티(가입된상태) 에서 클래스의 가입 form 을 작성하고 
  mentor table에서 pending 인상태가 됩니다. 이 후 관리자의 승인에 따라 authroize 상태로 바뀌면 그 때부터 fetch 해올 수 있게 구성하였습니다.
  ![image](https://user-images.githubusercontent.com/72781752/162324927-5f8c600c-d430-4efc-9901-5d085f5de6b8.png)
+ 
+ ### USER LOGIN
+![image](https://user-images.githubusercontent.com/72781752/162325200-945e8614-8505-421c-89d7-108cc6cf3635.png)
+로그인을 하였을 때 데이터베이스의 hashed password와 bcrypt와의 match 가 이루어지면 accesstoken과 refresh token이 발급되도록 JWT를 이용하여 구성하였습니다.
+![image](https://user-images.githubusercontent.com/72781752/162326264-91033a2b-c455-42af-9942-1c9127d83cd5.png)
+
+
 
  
 
