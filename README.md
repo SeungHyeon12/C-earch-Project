@@ -84,6 +84,8 @@
  이에따라서 각각의 sorting 에 따른 fetch 하는 api 들을 구현하였습니다.
  또한 위에서 말했듯이 서비스에서 멘티에서 멘토로의 승격시스템을 통해 중복 데이터를 줄인다고 하였습니다. 즉 멘티(가입된상태) 에서 클래스의 가입 form 을 작성하고 
  mentor table에서 pending 인상태가 됩니다. 이 후 관리자의 승인에 따라 authroize 상태로 바뀌면 그 때부터 fetch 해올 수 있게 구성하였습니다.
+ 
+ 
  ![image](https://user-images.githubusercontent.com/72781752/162324927-5f8c600c-d430-4efc-9901-5d085f5de6b8.png)
  
  ### USER LOGIN
