@@ -18,6 +18,7 @@
 + 위와같이 서비스흐름도가 구성되어있습니다. 차후적으로 설명드릴 내용은 아래와 같습니다
 >+ 서비스 페이지에 따른 erd 및 api 명세서 작성
 >+ 멘토 멘티 관리자 role 에 따른 권한분기 설정에 따른 api 개발
+>+ socket을 통한 실시간 서비스
 >+ 서버에서의 부하 줄이기
 >+ 대규모 트래픽을 고려한 분산형 아키텍트 구성 및 배포
 
@@ -116,8 +117,8 @@ JWT를 이용하여 구성하였습니다.
   }
   ```
   ### Strategy 및 권한
-  로그인하였을 때 accesstoken의 주기를 짧게주고 refreshtoken을 통해 다시 재발급받는 형식으로 진행되었다. 따라서 accessToken의 strategy 와 refreshToken에 대한 strategy
-  를 사용하여서 권한을 분기해주었습니다. 
+  로그인하였을 때 accesstoken의 주기를 짧게주고 refreshtoken을 통해 다시 재발급받는 형식으로 진행되었습니다. 따라서 accessToken의 strategy 와 refreshToken에 대한 strategy
+  를 사용하여서 guard를 통해 권한을 분기해주었습니다. 
   
   
   ![image](https://user-images.githubusercontent.com/72781752/162328516-d7181bd6-b2c4-4927-a395-dac492adc66b.png)
@@ -140,6 +141,8 @@ JWT를 이용하여 구성하였습니다.
     });
   }
   ```
+  
+  
   
 
 
