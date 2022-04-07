@@ -1,4 +1,4 @@
-﻿# C'earch Project (Backend position by 승현수)
+﻿# C'earch Project (담당part by 승현수)
 -------------------
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
 ### project 기간 : 3/14 ~ 4/4
