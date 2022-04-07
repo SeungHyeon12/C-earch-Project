@@ -115,9 +115,27 @@ JWT를 이용하여 구성하였습니다.
     }
   }
   ```
-  ## 
- 
-
+  ### Strategy 및 권한
+  로그인하였을 때 accesstoken의 주기를 짧게주고 refreshtoken을 통해 다시 재발급받는 형식으로 진행되었다. 따라서 accessToken의 strategy 와 refreshToken에 대한 strategy
+  를 사용하여서 권한을 분기해주었습니다. 
+  ![image](https://user-images.githubusercontent.com/72781752/162328516-d7181bd6-b2c4-4927-a395-dac492adc66b.png)
+  위와같이 guard를 통과하지 못하는 경우 에러가 나오게 됩니다.
+  또한 위에서 말했듯이 Admin , Mentee , Mento 에대한 role 을 분리하여 api 를 관리하였기 때문에 이에따른 roleGuard를 통해서 api의 접근권한을 제한합니다.
+ ```
+ //role에대한 decorator 생성및 roleguard 적용
+  @Mutation(() => Boolean)
+  @UseGuards(GqlAccessGuard,RoleGuaard)
+  @Role(USER_ROLE.ADMIN)
+  async deleteUser(
+    @CurrentUser() currentUser: IcurrentUser,
+    @Args('userId') userId: string,
+  ) {
+    return await this.userService.delete({
+      currentUser,
+      userId,
+    });
+  }
+  ```
 
 
  
