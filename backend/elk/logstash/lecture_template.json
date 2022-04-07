@@ -1,0 +1,48 @@
+{
+  "order": 0,
+  "index_patterns": ["lecture*"],
+  "template": "lecture",
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "my_ngram_analyzer": {
+          "tokenizer": "my_ngram_tokenizer",
+          "filter": ["lowercase"]
+        }
+      },
+      "tokenizer": {
+        "my_ngram_tokenizer": {
+          "type": "nGram",
+          "min_gram": "1",
+          "max_gram": "10"
+        }
+      }
+    },
+    "max_ngram_diff": "10"
+  },
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text",
+        "analyzer": "my_ngram_analyzer"
+      },
+      "classtitle": {
+        "type": "text",
+        "analyzer": "my_ngram_analyzer"
+      },
+      "classdescription": {
+        "type": "text",
+        "analyzer": "my_ngram_analyzer"
+      },
+      "companyName": {
+        "type": "text"
+      },
+      "department": {
+        "type": "text"
+      },
+      "rating": {
+        "type": "float"
+      }
+    }
+  }
+}

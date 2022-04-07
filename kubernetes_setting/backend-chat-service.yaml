@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cearch-backend-chat ## VERY VERY IMPORTANT - NGINX PROXYPASS needs this name
+  labels: 
+    app: backend-app-chat
+    tier: backend
+spec:
+  #type: Cluster IP is a default service
+  selector:
+    app: backend-app
+  ports: 
+    - name: chat
+      port: 5000
+      targetPort: 5000 #

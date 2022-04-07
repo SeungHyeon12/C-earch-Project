@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app
+  labels: 
+    app: frontend-app
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-app
+  template: 
+    metadata:
+      labels:
+        app: frontend-app
+        tier: frontend
+    spec:
+      containers:
+        - name: frontend-app
+          image: 258166918634.dkr.ecr.ap-northeast-2.amazonaws.com/codecearch_front:latest     
+          ports:
+            - name: react
+              containerPort: 3000

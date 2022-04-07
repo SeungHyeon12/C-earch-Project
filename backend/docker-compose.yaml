@@ -1,0 +1,57 @@
+version: '3.3'
+
+services:
+  my_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - ./src:/backend/src
+    env_file:
+      - './.env'
+    ports:
+      - '3000:3000'
+      - '5001:5000'
+    volumes:
+      - ./src:/backend/src
+      # - ./.env:/backend/.env
+
+  my-db:
+    platform: linux/amd64
+    image: 'mysql:latest'
+    environment:
+      MYSQL_DATABASE: 'test_db'
+      MYSQL_ROOT_PASSWORD: '0000'
+      TZ: 'Asia/Seoul'
+    cap_add:
+      - SYS_NICE
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    ports:
+      - '3307:3306'
+
+  my-redis:
+    image: 'redis:latest'
+    ports:
+      - '6000:6379'
+
+  elasticsearch:
+    image: elasticsearch:7.17.0
+    environment:
+      discovery.type: single-node
+    ports:
+      - 9200:9200
+  my-mongo:
+    image: 'mongo:latest'
+    ports:
+      - '27017:27017'
+
+  # logstash:
+  #   image: logstash:7.17.0
+  #   volumes:
+  #     - ./elk/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+  #     - ./elk/logstash/mysql-connector-java-8.0.28.jar:/usr/share/logstash/mysql-connector-java-8.0.28.jar
+  #     - ./elk/logstash/custom_template.json:/_templates/qtboard/custom_template.json
+  #     - ./elk/logstash/mentor_template.json:/_templates/mentor/mentor_template.json
+  #     - ./elk/logstash/lecture_template.json:/_templates/lecture/lecture_template.json

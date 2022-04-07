@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-app
+  labels: 
+    app: backend-app
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend-app
+  template: 
+    metadata:
+      labels:
+        app: backend-app
+        tier: backend
+    spec:
+      containers:
+        - name: backend-app
+          image: 258166918634.dkr.ecr.ap-northeast-2.amazonaws.com/codecearch:latest
+          env:
+            - name: GOOGLE_CLIENT_ID
+              value: 237557568181-nfsv7jfi69gkhspo3q0clor066h4pm0l.apps.googleusercontent.com
+           
+            - name: GOOGLE_CLIENT_SECRET
+              value: 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
+           
+            - name: GOOGLE_CALLBACK_URL
+              value: https://www.codesearch.shop/login/google/callback
+           
+            - name: IAMPORT_API_KEY
+              value: '2237209758798240'
+          
+            - name: IAMPORT_SECRET
+              value: 763a75859d56d8d32fad04ad7ff1b75fb6368ac9f1f93fb3de6b1f39c3773c04e08e7186f870d7d3
+           
+            - name: ACCESS_KEY_TOKEN
+              value: myAccessKey
+          
+            - name: REFRESH_KEY_TOKEN
+              value: myRefreshKey
+          
+            - name: SMS_APP_KEY
+              value: cM9mHyap4kUvjat4
+           
+            - name: SMS_X_SECRET_KEY
+              value: rheOIlML
+          
+            - name: SMS_SENDER
+              value: '01041598497'
+           
+            - name: EMAIL_APP_KEY
+              value: VlF4o7gU6bMSQokg
+          
+            - name: EMAIL_X_SECRET_KEY
+              value: nyR3UvXB
+            
+            - name: EMAIL_SENDER
+              value: support@Cearch.shop
+           
+            - name: SOCKET_GATEWAY_ORIGIN 
+              value: https://www.codesearch.shop
+            
+            - name: REDIS_URL
+              value: redis://redis-server-codesearch.wtmilw.ng.0001.apn2.cache.amazonaws.com:6379
+            
+            - name: MONGODB_URL
+              value: mongodb://192.168.55.60:27017
+            
+            - name: AWS_S3_ACCESSKEY_ID
+              value: AKIAXWQK6LR2PAYBMZYM
+           
+            - name: AWS_S3_SECRETACCESS_KEY
+              value: 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
+           
+            - name: AWS_S3_REGION
+              value: ap-northeast-2 
+           
+            - name: AWS_S3_SIGNATUREVERSION
+              value: v4
+           
+            - name: AWC_S3_BUCKET
+              value: cearchstorage
+
+            - name: ELASTICSEARCH_URL
+              value: http://ec2-3-38-100-99.ap-northeast-2.compute.amazonaws.com:9200/
+
+            - name: MYSQL_HOST
+              value: search-db.cwxg7py2ogvc.ap-northeast-2.rds.amazonaws.com
+
+            - name: MYSQL_PORT
+              value: '3306'
+
+            - name: MYSQL_DATABASE
+              value: cearchdb
+
+            - name: MYSQL_USER
+              value: root
+
+            - name: MYSQL_PASSWORD
+              value: '00000000'
+
+          ports:
+            - name: nestjs
+              containerPort: 3001
+            - name: socket
+              containerPort: 5000 

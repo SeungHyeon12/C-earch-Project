@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cearch-frontend ## VERY VERY IMPORTANT - NGINX PROXYPASS needs this name
+  labels: 
+    app: frontend-app
+    tier: backend
+spec:
+  #type: Cluster IP is a default service
+  type: NodePort
+  selector:
+    app: frontend-app
+  ports: 
+    - name: react
+      port: 3000
+      targetPort: 3000 # ClusterIp Service Port
