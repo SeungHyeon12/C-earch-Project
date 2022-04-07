@@ -14,3 +14,5 @@
 하는 방식으로 진행되며, 나의 관심사 혹은 검색을 통해서 원하는 카테고리의 클래스 멘토를 선택하고 팔로우 할 수 있습니다
 
 ## 페이지 구성 및 개요
+![image](https://user-images.githubusercontent.com/72781752/162289664-210fcbc2-81a7-42ea-b39c-34d6ab501e8c.png)
+
