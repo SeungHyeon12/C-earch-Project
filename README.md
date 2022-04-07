@@ -17,15 +17,23 @@
 ![image](https://user-images.githubusercontent.com/72781752/162289664-210fcbc2-81a7-42ea-b39c-34d6ab501e8c.png)
 + 위와같이 서비스흐름도가 구성되어있습니다. 차후적으로 설명드릴 내용은 아래와 같습니다
 >+ 서비스 페이지에 따른 erd 및 api 명세서 작성
->+ 멘토 멘티 관리자 role 에 따른 권한분기 설정에 따른 api 작성
+>+ 멘토 멘티 관리자 role 에 따른 권한분기 설정에 따른 api 개발
 >+ 서버에서의 부하 줄이기
 >+ 대규모 트래픽을 고려한 분산형 아키텍트 구성 및 배포
 
-## erd 및 api 명세서 
+## ERD 및 api 명세서 
+
+### ERD
 ![image](https://user-images.githubusercontent.com/72781752/162298043-67576bf8-7258-4fca-889e-fa858f15c7bd.png)
 
 ![image](https://user-images.githubusercontent.com/72781752/162299243-b1647731-7027-4eba-b4c0-2098d61f949d.png)
 
 + 우선적으로 멘토 멘티에대한 정보가 중복 요소들이 많기 때문에 멘토 멘티에대한 테이블을 따로파서 진행하기 보다는 승격을 하여서 멘토id를 부여하는 방식으로 진행하기로 하였습니다
 + 프론트에서 필수적으로 나와야할 요소들에 대해서 join 횟수를 줄여 속도를 검색 속도를 올리기위해서 중복컬럼을 사용하였습니다.
-+ 
+
+### API 명세서
+![image](https://user-images.githubusercontent.com/72781752/162307997-0f935b72-3bed-49da-b2b7-3eede455e2fd.png)
+
++ FRONTEND 측에서의 MOCKUP에 따라서 페이지에 따른 데이터들을 정리하였습니다.
++ 정리된 데이터를 기반으로 함수NAME 및 들어갈 argument name 및 api의 권한분기를 진행하여 진행하였습니다.
+
