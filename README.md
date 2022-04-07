@@ -87,7 +87,6 @@
  ![image](https://user-images.githubusercontent.com/72781752/162324927-5f8c600c-d430-4efc-9901-5d085f5de6b8.png)
  
  ### USER LOGIN
-![image](https://user-images.githubusercontent.com/72781752/162325200-945e8614-8505-421c-89d7-108cc6cf3635.png)
 로그인을 하였을 때 데이터베이스의 hashed password와 bcrypt와의 match 가 이루어지면 accesstoken과 refresh token이 발급되도록 JWT를 이용하여 구성하였습니다.
 ![image](https://user-images.githubusercontent.com/72781752/162326264-91033a2b-c455-42af-9942-1c9127d83cd5.png)
 
