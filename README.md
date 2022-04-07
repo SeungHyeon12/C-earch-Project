@@ -1,4 +1,4 @@
-﻿# C'earch Project (담당part by PM 및 main 개발자 승현수)
+﻿# C'earch Project (담당part 설명 by PM 및 main 개발자 승현수)
 -------------------
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
 ### project 기간 : 3/14 ~ 4/4
@@ -26,3 +26,6 @@
 
 ![image](https://user-images.githubusercontent.com/72781752/162299243-b1647731-7027-4eba-b4c0-2098d61f949d.png)
 
++ 우선적으로 멘토 멘티에대한 정보가 중복 요소들이 많기 때문에 멘토 멘티에대한 테이블을 따로파서 진행하기 보다는 승격을 하여서 멘토id를 부여하는 방식으로 진행하기로 하였습니다
++ 프론트에서 필수적으로 나와야할 요소들에 대해서 join 횟수를 줄여 속도를 검색 속도를 올리기위해서 중복컬럼을 사용하였습니다.
++ 
