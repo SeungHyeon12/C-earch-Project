@@ -175,6 +175,17 @@ JWT를 이용하여 구성하였습니다.
   
   
   ## fileupload 의 서버부하 줄이기
+  기존에 사용된 방식은 front에서 file을 서버로 보내면 s3 와의 stream을 연결하하는 방식이다. 이를 개선하기 위해서 스토리지에 저장된 이미지를 불러오거나
+  (get) 혹은 저장하는 방식(get)을 서버리스(serverless) 한방식으로 진행하였습니다
+  
+  ![image](https://user-images.githubusercontent.com/72781752/162334104-999c9836-e16f-49db-9091-ec131d014e95.png)
+  
+  즉 위와같이 스토리지에 저장되는 이미지 파일들을 불러오는 과정을 클라이언트에서 서버로 요청을하여서 presigned URL 을 발급하여 클라이언트에서 직접적으로 
+  s3 에 올리는 방식으로 진행하였습니다
+  
+![image](https://user-images.githubusercontent.com/72781752/162334403-42469b0b-fb27-4089-8586-94c380c137fe.png)
+
+  
   
   
 
