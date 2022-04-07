@@ -1,5 +1,5 @@
 ﻿# C'earch Project (담당part 설명 by PM 및 main 개발자 승현수)
--------------------
+===============
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
 ### project 기간 : 3/14 ~ 4/4
 
@@ -90,7 +90,7 @@
  
  ### USER LOGIN
 로그인을 하였을 때 데이터베이스의 hashed password와 bcrypt와의 match 가 이루어지면 accesstoken과 refresh token이 발급되도록 JWT를 이용하여 구성하였습니다.
-![image](https://user-images.githubusercontent.com/72781752/162326264-91033a2b-c455-42af-9942-1c9127d83cd5.png)
+>![image](https://user-images.githubusercontent.com/72781752/162326264-91033a2b-c455-42af-9942-1c9127d83cd5.png)
 
  ### USER LOGOUT
  로그아웃을 하였을 때 저장된 쿠키의 refresh token의 값을 RediS에 BLACKLIST로 등록하여 같은 정보를 담고 있을 시 이를 Validate 에서 검증하도록 진행하였습니다
