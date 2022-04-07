@@ -197,7 +197,16 @@ JWT를 이용하여 구성하였습니다.
   2. 채팅서버에대한 분산(redis cluster)
 
 ### kubernetes를 사용한 오토스케일링 및 배포 
-  1. 
+  backend server와 front server에 대한 deployment를 분리하여 k8s 클러스터 내에서 오토스케일링이 될 수 있도록 구성하였습니다.
+  k8s 를 사용하기 위해서 AWS 의 EKS 를 사용하였고 service deploy ingress에대한 yaml 파일을 작성하여 배포하였습니다 (kubernetes folder 참조)
+  
+  ![image](https://user-images.githubusercontent.com/72781752/162336560-afabbdb4-8626-41d8-a670-c24a2e0ce3e0.png)
+  
+  (k8s node 및 vpc 연결)
+  
+  
+  
+
   
 
 
