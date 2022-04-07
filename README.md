@@ -1,7 +1,7 @@
 ﻿# C'earch Project (담당part 설명 by PM 및 main 개발자 승현수)
 
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
-### project 기간 : 3/14 ~ 4/4
+### project 기간 : 3/17 ~ 4/4
 
 ## 사용기술 stack
 ![image](https://user-images.githubusercontent.com/72781752/162289487-089bde27-9c7d-4493-a886-fe861c525017.png)
@@ -19,7 +19,7 @@
 >+ 서비스 페이지에 따른 erd 및 api 명세서 작성
 >+ 멘토 멘티 관리자 role 에 따른 권한분기 설정에 따른 api 개발
 >+ socket을 통한 실시간 서비스
->+ 서버에서의 부하 줄이기
+>+ fileupload에서 서버에서의 부하 줄이기
 >+ 대규모 트래픽을 고려한 분산형 아키텍트 구성 및 배포
 
 ## ERD 및 api 명세서 
@@ -168,7 +168,17 @@ JWT를 이용하여 구성하였습니다.
   
   따라서 채팅로그를 저장해놓고 방을 접속하는 순간 로그를 mongodb에서 검색조건에 따라 (채팅방을 접속한 날짜기준으로부터 주는형식) 제공해줍니다.
   
+  
   ![image](https://user-images.githubusercontent.com/72781752/162332678-db58c754-b894-4767-aacd-e7a58230e3c4.png)
+  
+  또한 websocket에대한 guard를 통해서 header의 handshake안의 토큰값이 만료되면 chat log를 보낼 수 없도록 설정해놓았습니다
+  
+  
+  ## fileupload 의 서버부하 줄이기
+  
+  
+
+
 
 
   
