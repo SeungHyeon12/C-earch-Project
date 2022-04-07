@@ -175,7 +175,8 @@ JWT를 이용하여 구성하였습니다.
   
   
   ## fileupload 의 서버부하 줄이기
-  기존에 사용된 방식은 front에서 file을 서버로 보내면 s3 와의 stream을 연결하하는 방식이다. 이를 개선하기 위해서 스토리지에 저장된 이미지를 불러오거나
+  기존에 사용된 방식은 front에서 file을 서버로 보내면 file interceptor를 통해서 파일을 받고 s3 와의 stream을 연결하하는 방식입니다. 
+   이를 개선하기 위해서 스토리지에 저장된 이미지를 불러오거나
   (get) 혹은 저장하는 방식(get)을 서버리스(serverless) 한방식으로 진행하였습니다
   
   ![image](https://user-images.githubusercontent.com/72781752/162334104-999c9836-e16f-49db-9091-ec131d014e95.png)
@@ -194,6 +195,9 @@ JWT를 이용하여 구성하였습니다.
   
   1. kubernetes를 사용한 오토스케일링 및 배포
   2. 채팅서버에대한 분산(redis cluster)
+
+### kubernetes를 사용한 오토스케일링 및 배포 
+  1. 
   
 
 
