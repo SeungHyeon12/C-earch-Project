@@ -40,7 +40,7 @@
 
 ## api 개발 및 권한
 ### USER create
- NHN CLOUD SERVICE 를 사용하여서 가입시 비밀번호를 사용하여서 인증 후 bcrypt 를 이용하여 hash 값을 db 에 저장하도록 하였습니다.
+ NHN CLOUD SERVICE 를 사용하여서 랜덤으로 생성된 인증번호를 인증 후 bcrypt 를 이용하여 hash 값을 db 에 저장하도록 하였습니다.
  ```
   async sendTokenPhone({ phoneNumber, authNumber }: ItokenPhone) {
     const appKey = process.env.SMS_APP_KEY;
