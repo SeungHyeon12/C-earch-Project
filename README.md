@@ -219,9 +219,12 @@ JWT를 이용하여 구성하였습니다.
 ![image](https://user-images.githubusercontent.com/72781752/162338307-e1b95512-a5e5-4188-99c1-b1ccfc972aa5.png)
 ![image](https://user-images.githubusercontent.com/72781752/162338452-d47e90a4-a231-484a-838b-8e858e932ed5.png)
 
-  따라서 각 endpoint 로 접속 하였을 때 서버가 정상적으로 배포가 된것을 확인할 수 있습니다.
+  따라서 각 endpoint 로 접속 하였을 때 양측쪽 서버가 k8s 를 통한 부하분산 된 서버가 정상적으로 나오는것을 확인하실 수 있습니다.
   
   ![image](https://user-images.githubusercontent.com/72781752/162338818-cb8ca97f-deae-4623-a503-0984a268500b.png)
+  
+  
+### chatting 서버에대한 고찰
 
   
   
