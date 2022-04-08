@@ -21,6 +21,7 @@ import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { SearchMento } from './entities/searchMento.entity';
 import { UpdateUserForm } from './dto/updateUser.input';
 import { LectureProductCategory } from '../lectureproductCategory/entities/lectureproductCategory.entity';
+import { RoleGuard } from 'src/common/auth/guard/roleGuard';
 
 @Resolver()
 export class UserResolver {
@@ -241,7 +242,7 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  @UseGuards(GqlAccessGuard)
+  @UseGuards(GqlAccessGuard,RoleGuard)
   @Role(USER_ROLE.ADMIN)
   async authMentorLecture(
     @CurrentUser() currentUser: IcurrentUser,
@@ -256,7 +257,7 @@ export class UserResolver {
   }
 
   @Mutation(() => Boolean)
-  @UseGuards(GqlAccessGuard)
+  @UseGuards(GqlAccessGuard,RoleGuard)
   @Role(USER_ROLE.ADMIN)
   async deleteUser(
     @CurrentUser() currentUser: IcurrentUser,

@@ -49,7 +49,6 @@ export class AuthResolver {
   ) {
     const cookie = context.req.headers.cookie;
     const refreshToken = cookie.replace('refreshToken=', '');
-    console.log('cooookiiiieeee', refreshToken);
     return await this.authService.enrollBlackList({
       user: currentUser,
       refreshToken,
