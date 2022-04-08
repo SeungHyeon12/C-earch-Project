@@ -30,7 +30,7 @@
 ![image](https://user-images.githubusercontent.com/72781752/162299243-b1647731-7027-4eba-b4c0-2098d61f949d.png)
 
 + 우선적으로 멘토 멘티에대한 정보가 중복 요소들이 많기 때문에 멘토 멘티에대한 테이블을 따로파서 진행하기 보다는 승격을 하여서 멘토id를 부여하는 방식으로 진행하기로 하였습니다
-+ 프론트에서 필수적으로 나와야할 요소들에 대해서 join 횟수를 줄여 속도를 검색 속도를 올리기위해서 중복컬럼을 사용하였습니다.
++ 프론트에서 필수적으로 나와야할 요소들에 대해서 join 횟수를 줄여 속도를 검색 속도를 올리기위해서 역정규화 및 중복컬럼을 사용하였습니다.
 
 ### API 명세서
 ![image](https://user-images.githubusercontent.com/72781752/162307997-0f935b72-3bed-49da-b2b7-3eede455e2fd.png)
@@ -219,11 +219,10 @@ JWT를 이용하여 구성하였습니다.
 ![image](https://user-images.githubusercontent.com/72781752/162338307-e1b95512-a5e5-4188-99c1-b1ccfc972aa5.png)
 ![image](https://user-images.githubusercontent.com/72781752/162338452-d47e90a4-a231-484a-838b-8e858e932ed5.png)
 
+  따라서 각 endpoint 로 접속 하였을 때 서버가 정상적으로 배포가 된것을 확인할 수 있습니다.
   
+  ![image](https://user-images.githubusercontent.com/72781752/162338818-cb8ca97f-deae-4623-a503-0984a268500b.png)
 
-  ```
-  
-  
   
   
 
