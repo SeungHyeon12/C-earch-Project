@@ -216,14 +216,10 @@ JWT를 이용하여 구성하였습니다.
   다만 chat은 백앤드 서버의 gateway 를 사용하기 때문에 gateway port 5000 번을 cluster Ip service 로 노출 시켜서 front server의 socket 에서 polling 통신
   을 할 수 있게 하였습니다.
   
-  ![image](https://user-images.githubusercontent.com/72781752/162338307-e1b95512-a5e5-4188-99c1-b1ccfc972aa5.png)
+![image](https://user-images.githubusercontent.com/72781752/162338307-e1b95512-a5e5-4188-99c1-b1ccfc972aa5.png)
 ![image](https://user-images.githubusercontent.com/72781752/162338452-d47e90a4-a231-484a-838b-8e858e932ed5.png)
 
   
-  
-  
-  >frontserver : https://www.codesearch.shop
-  >backendServer : https://api.codesearch.shop
 
   ```
   
