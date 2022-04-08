@@ -234,6 +234,9 @@ JWT를 이용하여 구성하였습니다.
 
 ![image](https://user-images.githubusercontent.com/72781752/162340557-f5dddc20-0fe0-4f4d-b7f1-d9b5ad39fa06.png)
 
+![image](https://user-images.githubusercontent.com/72781752/162342807-8abe109a-472b-4db2-b756-fa084787d231.png)
+
+
 
 
   
