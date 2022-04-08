@@ -205,11 +205,28 @@ JWT를 이용하여 구성하였습니다.
   (k8s node 및 vpc 연결)
   
   또한 yaml 파일을 통해서 백앤드 와 프론트앤드 서버의 배포를 aws container register을 통해 이미지를 배포해주었습니다.
-  그 후 그 이미지에 대한 url을 받아와서 배포해주었습니다.
+  그 후 그 이미지에 대한 url을 받아와서 replica를 하나씩하여 총 4개의 기본 pod가 나오게 배포하였습니다
   
-  ![image](https://user-images.githubusercontent.com/72781752/162337383-3e25e274-53e9-437f-a60f-cd3900971087.png)
+  ![image](https://user-images.githubusercontent.com/72781752/162338070-f2eca426-f574-47a1-81cd-282d4fa629be.png)
 
 
+  그 후 k8s 클러스터내부의 백앤드 deploy 와 ㄴ프론트 deploy 의 서비스를 DNS 의 ENDPOINT 형식을 통해 분기 될 수 있도록 하였습니다.
+  이를 구성하기위해서 ALB(Application Load Blancer) controller를 비포하였습니다. 또한 ingress를 통해 alb 생성시 서비스를 외부에 노출시키기 위해 
+  contianer port 에 대해서 backend servcie 와 backend service 를  NodePort 로 노출시켰습니다. 
+  다만 chat은 백앤드 서버의 gateway 를 사용하기 때문에 gateway port 5000 번을 cluster Ip service 로 노출 시켜서 front server의 socket 에서 polling 통신
+  을 할 수 있게 하였습니다.
+  
+  ![image](https://user-images.githubusercontent.com/72781752/162338307-e1b95512-a5e5-4188-99c1-b1ccfc972aa5.png)
+![image](https://user-images.githubusercontent.com/72781752/162338452-d47e90a4-a231-484a-838b-8e858e932ed5.png)
+
+  
+  
+  
+  >frontserver : https://www.codesearch.shop
+  >backendServer : https://api.codesearch.shop
+
+  ```
+  
   
   
   
