@@ -1,7 +1,8 @@
-﻿# C'earch Project (담당part 설명 by PM 및 main 개발자 승현수)
+﻿# C'earch Project (by PM 및 main 개발자 승현수)
 
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
 ### project 기간 : 3/17 ~ 4/4
+### 담당부분은 아래와 같습니다
 
 ## 사용기술 stack
 ![image](https://user-images.githubusercontent.com/72781752/162289487-089bde27-9c7d-4493-a886-fe861c525017.png)
