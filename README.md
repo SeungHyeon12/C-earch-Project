@@ -227,6 +227,15 @@ JWT를 이용하여 구성하였습니다.
   
 ### chatting 서버에대한 고찰
 
+기존의 서버는 front와 server 간의 통신이 일대일이기 때문에 오토스케일링 과정중 backend pod가 terminate 되면 연결이 끊기는 현상이 존재합니다. 따라서 socket server를 하나로 
+연결해줄 필요성이 있습니다. 이를 해결하기위해서  redis io adapter로 기존의 socket io adapter를 커스터마이징하였 습니다. 따라서 redis의 pub sub 기능을 사용하여서 하나로 묶어
+줄 수 있도록 하였습니다. 다만 오토스케일링 된 pod값이 늘어날수록 redis 인스턴스의 부하가 심해지기 때문에 redis cluster을 구성하여 cluster dns 를 사용하여 chatting 서버를 
+연결 시켰습니다.
+
+![image](https://user-images.githubusercontent.com/72781752/162340557-f5dddc20-0fe0-4f4d-b7f1-d9b5ad39fa06.png)
+
+
+
   
   
 
