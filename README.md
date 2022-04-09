@@ -118,8 +118,8 @@ JWT를 이용하여 구성하였습니다.
   }
   ```
   ### Strategy 및 권한
-  로그인하였을 때 accesstoken의 주기를 짧게주고 refreshtoken을 통해 다시 재발급받는 형식으로 진행되었습니다. 따라서 accessToken의 strategy 와 refreshToken에 대한 strategy
-  를 사용하여서 guard를 통해 권한을 분기해주었습니다. 
+  로그인하였을 때 accesstoken의 주기를 짧게주고 refreshtoken을 통해 다시 재발급받는 형식으로 진행하었습니다. 따라서 accessToken의 strategy 와 refreshToken에 대한 strategy
+  를 사용하여서 guard를 통해 권한을 분기하여 유저의 정보를 사용하도록 하였습니다. 
   
   
   ![image](https://user-images.githubusercontent.com/72781752/162328516-d7181bd6-b2c4-4927-a395-dac492adc66b.png)
