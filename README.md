@@ -1,7 +1,7 @@
 ﻿# C'earch Project (by PM 및 main 개발자 승현수)
 
 ![image](https://user-images.githubusercontent.com/72781752/162286009-2952f820-23a4-4b16-b98c-fe06060a1d89.png)
-### project 기간 : 3/17 ~ 4/4
+### project 기간 : 2022 3/17 ~ 4/4
 ### 담당부분은 아래와 같습니다
 
 ## 사용기술 stack
